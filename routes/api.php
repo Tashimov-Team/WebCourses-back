@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\CourseController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\V1\ApiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,13 +20,10 @@ Route::middleware(['auth:sanctum'])->get('/user', function (Request $request) {
     return $request->user();
 });
 
-
 //Login
-Route::post('/register', [AuthController::class, 'register']);
 Route::post('/login', [AuthController::class, 'login']);
 Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logout']);
 
-
 //Courses
-Route::get('/courses', [CourseController::class, 'index']);
-Route::get('/courses/{id}', [CourseController::class, 'show']);
+Route::get('/courses', [ApiController::class, 'index']);
+Route::get('/courses/{id}', [ApiController::class, 'show']);

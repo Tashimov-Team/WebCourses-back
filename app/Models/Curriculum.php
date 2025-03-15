@@ -10,6 +10,13 @@ class Curriculum extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+        'course_id',
+        'duration',
+        'themes'
+    ];
+
     public function course()
     {
         return $this->belongsTo(Course::class);
