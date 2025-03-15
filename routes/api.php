@@ -29,3 +29,4 @@ Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logo
 
 //Courses
 Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/courses/{id}', [CourseController::class, 'show']);

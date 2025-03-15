@@ -31,7 +31,16 @@ class CourseController extends Controller
     public function show($id)
     {
         $course = Course::where('id', $id)->first();
-        $videos = Video::where('course_id', $course->id);
+        $videos = Video::where('course_id', $id)->get();
+        $videosData = [];
+        foreach ($videos as $video) {
+            $videosData[] = [
+                'id' => $video->id,
+                'title' => $video->title,
+                'duration' => $video->duration,
+                'url' => $video->url,
+            ];
+        }
         return response()->json([
             'id' => $course->id,
             'title' => $course->title,
@@ -40,12 +49,7 @@ class CourseController extends Controller
             'image' => asset('storage/' . $course->image),
             'category' => $course->category,
             'features' => $course->features,
-            'videos' => [
-                'id' => $videos->id,
-                'title' => $videos->title,
-                'duration' => $videos->duration,
-                'url' => $videos->url,
-            ]
+            'videos' => $videosData,
         ], 200);
     }
     public function store(Request $request)
