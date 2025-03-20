@@ -12,7 +12,7 @@
         <div class="max-w-7xl mx-auto px-4">
             <div class="flex justify-between h-16">
                 <div class="flex items-center space-x-8">
-                    <span class="text-xl font-bold text-gray-800">Админка ₍^. .^₎⟆</span>
+                    <span class="text-xl font-bold text-gray-800">Админ-панель ₍^. .^₎⟆</span>
                     <div class="hidden md:flex space-x-4">
                         <a href="/admin/courses" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100">Курсы</a>
                         <a href="/admin/curricula" class="px-3 py-2 rounded-md text-sm font-medium hover:bg-gray-100">Учебные планы</a>

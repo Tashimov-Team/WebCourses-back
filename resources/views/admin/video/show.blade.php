@@ -14,7 +14,7 @@
         <video src="{{ $url }}" controls class="my-5"></video>
     </div>
     <div class="mt-6 flex justify-end space-x-3 mb-6 mr-6">
-        <a href="" class="bg-gray-100 text-gray-700 px-4 py-2 rounded hover:bg-gray-200">Назад</a>
+        <a href="{{ route('admin.videos.index') }}" class="bg-gray-100 text-gray-700 px-4 py-2 rounded hover:bg-gray-200">Назад</a>
     </div>
 </div>
 @endsection

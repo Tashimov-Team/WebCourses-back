@@ -19,14 +19,14 @@
 
                 <!-- Поле email -->
                 <div class="mb-6">
-                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Логин</label>
                     <input
-                        type="email"
+                        type="text"
                         id="email"
                         name="email"
                         required
                         class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 transition duration-200"
-                        placeholder="Введите ваш email">
+                        placeholder="Введите ваш логин">
                 </div>
 
                 <!-- Поле пароля -->

@@ -31,7 +31,7 @@ class ApiController extends Controller
                 'id' => $video->id,
                 'title' => $video->title,
                 'duration' => $video->duration,
-                'url' => asset('storage/' . $video->url),
+                'url' => url('storage/' . $video->url),
             ];
         }
         return response()->json([
