@@ -27,3 +27,5 @@ Route::middleware('auth:sanctum')->post('/logout', [AuthController::class, 'logo
 //Courses
 Route::get('/courses', [ApiController::class, 'index']);
 Route::get('/courses/{id}', [ApiController::class, 'show']);
+Route::middleware('auth:sanctum')->post('/video/progress', [ApiController::class, 'updateProgress']);
+Route::middleware('auth:sanctum')->get('/user/courses-progress', [ApiController::class, 'getUserCoursesProgress']);
